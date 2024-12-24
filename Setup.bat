@@ -151,16 +151,27 @@ echo.
 echo ===============================
 echo Build process completed successfully.
 echo ===============================
-
-:: 询问用户是否需要运行Cloud
-echo.
-set /p run_Cloud=Do you want to run the Cloud now? (Y/N): 
-if /i "%run_Cloud%"=="Y" (
-    echo Running Cloud.exe...
-    start "" "Cloud.exe"
+ 
+:: 重命名Cloud.exe为WordCloud.exe
+echo Renaming Cloud.exe to WordCloud.exe...
+ren "Cloud.exe" "WordCloud.exe"
+ 
+:: 检查重命名是否成功（可选步骤，但有助于调试）
+if exist "WordCloud.exe" (
+    echo Rename successful.
 ) else (
-    echo Skipping execution of Cloud.exe.
+    echo Rename failed. Cloud.exe not found.
+    exit /b 1
 )
-
+ 
+:: 询问用户是否需要运行WordCloud
+echo.
+set /p run_WordCloud=Do you want to run the WordCloud now? (Y/N): 
+if /i "%run_WordCloud%"=="Y" (
+    echo Running WordCloud.exe...
+    start "" "WordCloud.exe"
+) else (
+    echo Skipping execution of WordCloud.exe.
+)
 endlocal
 pause
