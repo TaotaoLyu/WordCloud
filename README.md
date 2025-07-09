@@ -5,7 +5,7 @@
 ## 作者信息
 
 - **姓名**: Lv Taotao
-- **邮箱**: lvtaotao@e.gzhu.edu.cn
+- **邮箱**: taotao.lyu@e.gzhu.edu.cn
 
 ##
 
