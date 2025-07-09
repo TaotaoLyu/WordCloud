@@ -1,3 +1,4 @@
+
 """
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -11,6 +12,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+
+
 import tkinter as tk # 导入tkinter库用于创建GUI
 from tkinter import filedialog, messagebox, ttk # 导入tkinter特定模块以增强GUI功能
 import os # 导入操作系统接口模块
